@@ -1,6 +1,7 @@
 # Toast
 
 Toast is a simple and light toast component, no need to add provider, just call the toast function and it will be shown.
+![Captura de Tela 2024-03-16 às 15 06 35](https://github.com/MaiconLeffa/toast/assets/41764184/c7860c66-9571-4d41-93b1-add2ef5b264c)
 
 ```jsx
 import { toast } from "@maiconleffa/toast";
