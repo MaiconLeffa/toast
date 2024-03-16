@@ -15,9 +15,7 @@
     "send": "rollup -c --bundleConfigAsCjs && npm publish"
   },
   "keywords": [
-    "date",
-    "datepicker",
-    "daterangepicker",
+    "toast",
     "react",
     "front-end"
   ],
