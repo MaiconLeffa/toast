@@ -1,13 +1,9 @@
-import React, { ReactNode } from "react";
 import { mountToast } from "./mountToast";
-
-interface Props {
-  content: ReactNode | string;
-}
+import { ToastProps } from "./types";
 
 export const toast = {
-  success: (props: Props) => mountToast({ ...props, type: "success" }),
-  warning: (props: Props) => mountToast({ ...props, type: "warning" }),
-  error: (props: Props) => mountToast({ ...props, type: "error" }),
-  custom: (props: Props) => mountToast({ ...props, type: "custom" })
+  success: (props: ToastProps) => mountToast({ ...props, type: "success" }),
+  warning: (props: ToastProps) => mountToast({ ...props, type: "warning" }),
+  error: (props: ToastProps) => mountToast({ ...props, type: "error" }),
+  custom: (props: ToastProps) => mountToast({ ...props, type: "custom" })
 };
