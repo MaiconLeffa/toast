@@ -64,4 +64,5 @@ Toast props
 | :---: | :---: | :---: | :---: |
 | content | ReactNode, string, HTMLElement | null | The toast content, can be a string or a React component |
 | duration | number | 5000 | Duration to dismiss the toast in milisseconds |
+| dismissible | boolean | true | Determines if toast can be closed before timer ends
 
