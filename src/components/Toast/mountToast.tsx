@@ -1,12 +1,12 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { createToastWrapper } from "./createWrapper";
-import { ToastProps } from "./types";
+import { MountToastProps } from "./types";
 import { ToastBody } from "./toastBody";
+import { cancelToast, dismissToast } from "./events";
 
-export function mountToast(props: ToastProps) {
+export function mountToast(props: MountToastProps) {
   const { content, type, duration = 5000 } = props;
-
   const toastWrapper = createToastWrapper();
 
   const toast = document.createElement("div");
@@ -15,27 +15,15 @@ export function mountToast(props: ToastProps) {
   toastWrapper.append(toast);
 
   const root = createRoot(toast);
+  let timeToDismiss: NodeJS.Timeout | null = null;
 
   if (type === "custom") {
     root.render(content);
   } else {
-    root.render(<ToastBody {...props} />);
+    root.render(
+      <ToastBody onClose={() => cancelToast(timeToDismiss, toast)} {...props} />
+    );
   }
 
-  createTimer(toast, duration);
-}
-
-function createTimer(toast: HTMLDivElement, duration: number) {
-  setTimeout(() => {
-    toast.classList.remove("animate-show-toast");
-    toast.classList.add("animate-hide-toast");
-  }, duration);
-
-  setTimeout(() => {
-    toast.style.maxHeight = "0px";
-  }, duration + 200);
-
-  setTimeout(() => {
-    toast.remove();
-  }, duration + 350);
+  timeToDismiss = setTimeout(() => dismissToast(toast), duration);
 }
