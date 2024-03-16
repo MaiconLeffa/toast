@@ -59,4 +59,9 @@ Toast options
 | error | A error toast will be shown in red theme |
 | custom | Create your own toast component using same behavior |
 
+Toast props
+| prop | type | default | Description |
+| :---: | :---: | :---: | :---: |
+| content | ReactNode, string, HTMLElement | null | The toast content, can be a string or a React component |
+| duration | number | 5000 | Duration to dismiss the toast in milisseconds |
 
