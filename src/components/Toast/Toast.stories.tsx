@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Demo } from ".";
+import type { Meta, Preview, StoryObj } from "@storybook/react";
+import { Demo } from "./demo";
 
 const meta: Meta<typeof Demo> = {
   title: "Components/Toast",
