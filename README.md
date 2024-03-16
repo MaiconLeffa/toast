@@ -34,16 +34,16 @@ export function Demo() {
 
   return (
     <div>
-      <button className="" onClick={success}>
+      <button onClick={success}>
         success
       </button>
-      <button className="ml-4" onClick={warning}>
+      <button onClick={warning}>
         warning
       </button>
-      <button className="ml-4" onClick={error}>
+      <button onClick={error}>
         error
       </button>
-      <button className="ml-4" onClick={custom}>
+      <button onClick={custom}>
         custom
       </button>
     </div>
