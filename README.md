@@ -1,4 +1,4 @@
-# DateRangePicker
+# Toast
 
 Toast is a simple and light toast component, no need to add provider, just call the toast function and it will be shown.
 
