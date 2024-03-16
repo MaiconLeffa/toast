@@ -1,0 +1,55 @@
+{
+  "name": "@maiconleffa/toast",
+  "version": "1.0.0",
+  "description": "A simple and light toast component",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "ds:build": "rollup -c --bundleConfigAsCjs",
+    "send": "rollup -c --bundleConfigAsCjs && npm publish"
+  },
+  "keywords": [
+    "date",
+    "datepicker",
+    "daterangepicker",
+    "react",
+    "front-end"
+  ],
+  "author": "Maicon Leffa",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/react": "^7.6.17",
+    "@storybook/react-vite": "^7.6.17",
+    "@storybook/test": "^7.6.17",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.17",
+    "tailwindcss": "^3.4.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "typescript": "^5.4.2",
+    "rollup": "^4.12.1",
+    "rollup-plugin-typescript2": "^0.36.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaiconLeffa/DateRangePicker"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
