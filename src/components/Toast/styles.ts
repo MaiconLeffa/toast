@@ -1,4 +1,6 @@
-export const styles = {
+import { StylesProps } from "./types";
+
+export const styles: StylesProps = {
   error: {
     container: "bg-red-500",
     progressWrapper: "bg-red-600",
