@@ -4,7 +4,8 @@ import { toast } from "./Toast";
 export function Demo() {
   function success() {
     toast.success({
-      content: <>I`m a success Toast</>
+      content: <>I`m a success Toast</>,
+      dismissible: false
     });
   }
 
